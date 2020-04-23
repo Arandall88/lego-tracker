@@ -1,12 +1,13 @@
 require("dotenv").config();
 const express = require("express");
+// const compression = require("compression");
 const PORT = process.env.PORT || 3000;
 
 const app = express();
 
 const db = require("./models");
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
 app.use(express.static("dist"));
 
 // Parse application body as JSON
